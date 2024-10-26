@@ -13,10 +13,10 @@ function App() {
       { /* Common */}
       {/* <h1>Header Component</h1> */}
       <Routes>
-        {/* <Route path="/auth" element={<AuthLayout />}>
+        <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<AuthLogin />} />
           <Route path="register" element={<AuthRegister />} />
-        </Route> */}
+        </Route>
         <Route path="/header" element={<Header />}>
 
         </Route>

@@ -15,7 +15,7 @@ const CardSection = () => {
                 className="h-80 w-full rounded-tr-3xl object-cover"
             />
 
-            <div className="p-4 text-center">
+            <div className=" mt-5 mb-5 p-4 text-center">
                 <strong className="text-xl font-medium text-gray-900"> Aloe Vera </strong>
 
                 <p className="mt-2 text-pretty text-gray-700">
