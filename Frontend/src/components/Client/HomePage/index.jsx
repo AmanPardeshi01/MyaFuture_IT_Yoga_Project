@@ -10,9 +10,9 @@ const HomePage = () => {
     return (
 
             <div className='w-full'>
-                <Header />
+                {/* <Header /> */}
                 <TestimonialSection/>
-                <Gallery/>
+                {/* <Gallery/> */}
                 <CardSection/>
                 <ContactUs />
                 <Footer/>
