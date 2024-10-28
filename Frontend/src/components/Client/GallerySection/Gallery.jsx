@@ -70,32 +70,42 @@ const Gallery = () => {
   return (
     <div className="mt-5 mb-5 p-4 sm:p-8 bg-gray-100 min-h-screen">
       <div className="text-center mb-6">
-        <h1 className="italic text-4xl font-bold text-blue-600">Our Gallery</h1>
+        <h1 className="italic text-4xl font-bold text-gray-800">Our Gallery</h1>
       </div>
 
       <div className="flex justify-center space-x-40 mb-6">
         <button
-          className={`px-10 py-2 font-bold text-white rounded-md ${activeTab === "photos" ? "bg-blue-600" : "bg-gray-400"}`}
+          className="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800 text-white px-6 py-2 text-base font-semibold transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20"
           onClick={() => setActiveTab("photos")}
         >
-          Photos
+          <span className="text-lg">Photos</span>
+          <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+            <div className="relative h-full w-10 bg-white/20" />
+          </div>
         </button>
+
+
         <button
-          className={`px-10 py-2 font-bold text-white rounded-md ${activeTab === "videos" ? "bg-blue-600" : "bg-gray-400"}`}
+          className="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800 text-white px-6 py-2 text-base font-semibold transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20"
           onClick={() => setActiveTab("videos")}
         >
-          Videos
+          <span className="text-lg">Videos</span>
+          <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+            <div className="relative h-full w-10 bg-white/20" />
+          </div>
         </button>
+
+
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {activeTab === "photos" && displayedImages.map((item) => (
           <div key={item.id} className="bg-white shadow-md rounded-md overflow-hidden">
-            <div className="transition-transform transform hover:scale-105">
+            <div className="transition-transform transform hover:scale-105"> {/* Same hover effect */}
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-40 object-cover rounded-md cursor-pointer"
+                className="w-full h-auto rounded-md" // Use h-auto for consistency
                 onClick={() => openModal(item.src)}
               />
             </div>
@@ -103,13 +113,16 @@ const Gallery = () => {
         ))}
         {activeTab === "videos" && videos.map((item) => (
           <div key={item.id} className="bg-white shadow-md rounded-md overflow-hidden">
-            <video controls className="w-full h-auto rounded-md">
-              <source src={item.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="transition-transform transform hover:scale-105"> {/* Add hover effect for videos as well */}
+              <video controls className="w-full h-auto rounded-md"> {/* Maintain same styles */}
+                <source src={item.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         ))}
       </div>
+
 
       {modalImage && (
         <div
