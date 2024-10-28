@@ -6,12 +6,17 @@ import TestimonialSection from '../TestimonialSection/TestimonialSection'
 import Footer from '../Footer/Footer'
 import Gallery from '../GallerySection/Gallery'
 import FAQs from '../FAQ/FAQSection'
+import Navbar from '../Navbar/Navbar'
+import Landing from '../Landing/Landing'
+import Benifits from '../Benefits/Benifits'
 
 const HomePage = () => {
     return (
 
         <div className='w-full'>
-            {/* <Header /> */}
+           <Navbar />
+           <Landing />
+           <Benifits />
             <TestimonialSection />
             <Gallery />
             {/* <CardSection/> */}

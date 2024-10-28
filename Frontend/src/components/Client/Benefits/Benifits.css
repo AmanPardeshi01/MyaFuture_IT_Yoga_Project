@@ -1,0 +1,138 @@
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.benefit-card {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    font-size: 2rem;
+    color: #f97316;
+    margin-bottom: 1rem;
+}
+
+/* Animated Clock */
+.clock-hand {
+    display: inline-block;
+    animation: rotateClock 2s linear infinite;
+}
+
+/* Animated Age Icon */
+.age-icon {
+    animation: changeAge 8s infinite;
+}
+
+/* Animated Heart */
+.heart-icon {
+    display: inline-block;
+    animation: heartbeat 1s ease infinite;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: #BCA276;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-section button {
+    background: white;
+    color: #f97316;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-section button:hover {
+    background: #f8fafc;
+}
+
+.blinking-button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #008170;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    animation: blinkExpand 1.5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @keyframes blinkExpand {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.1);
+    }
+  }
+  
+  .blinking-button:hover {
+    background-color: #006d5b;
+  }
+  
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateClock {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+    }
+}
