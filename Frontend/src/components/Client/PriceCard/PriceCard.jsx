@@ -1,85 +1,66 @@
 import React from 'react';
-import './PriceCard.css'; // Assuming you will place your CSS here
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import './PriceCard.css';
 
-const PriceCard = () => {
+
+const PriceCardSection = () => {
   const redirectToPayment = () => {
-    window.location.href = 'payment-page.html'; // Replace with actual payment page URL
+    window.location.href = 'payment-page.html'; // Placeholder URL
   };
 
-  const packages = [
-    {
-      title: 'General Yoga',
-      price: '₹2000/month',
-      benefits: [
-        'Access to Yoga Area',
-        'Group Classes',
-        'Group Trainer',
-        'Fitness Orientation',
-        'Personal Assistance'
-      ],
-      background: "url('images/image17.jpg')"
-    },
-    {
-      title: 'Advanced Yoga',
-      price: '₹2500/month',
-      benefits: [
-        'Access to Yoga Area',
-        'Group Classes',
-        'Group Trainer',
-        'Fitness Orientation',
-        'Personal Assistance'
-      ],
-      background: "url('images/image17.jpg')"
-    },
-    {
-      title: 'Yoga Therapy',
-      price: '₹3000/month',
-      benefits: [
-        'Access to Yoga Area',
-        'Group Classes',
-        'Group Trainer',
-        'Fitness Orientation',
-        'Personal Assistance'
-      ],
-      background: "url('images/image17.jpg')"
-    }
-  ];
-
   return (
-    <section>
+    <section className="price-section-container">
+      <h1 className="price-section-heading">Our Services</h1>
       <div className="price-section">
-        {packages.map((pkg, index) => (
-          <div
-            key={index}
-            className={`price-card ${index === 1 ? 'middle-card' : ''}`}
-            style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 69, 0, 0.5)), ${pkg.background}`,
-              backgroundSize: '95% 95%',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center'
-            }}
-          >
-            <div className="price-card-content">
-              <h2>{pkg.title}</h2>
-              <h3>{pkg.price}</h3>
-              <ul>
-                {pkg.benefits.map((benefit, idx) => (
-                  <li key={idx}>
-                    <FontAwesomeIcon icon={faCheck} className="check-icon" /> {benefit}
-                  </li>
-                ))}
-              </ul>
-              <button className="enroll-btn" onClick={redirectToPayment}>
-                Enroll Now
-              </button>
-            </div>
+        {/* General Yoga Package */}
+        <div className="price-card" id="first-card" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 69, 0, 0.5)), url('images/image19.jpg')` }}>
+          <div className="price-card-content">
+            <h2>General Yoga</h2>
+            <h3>₹2000/month</h3>
+            <ul>
+              <li><i className="fas fa-check check-icon"></i>Access to Yoga Area</li>
+              <li><i className="fas fa-check check-icon"></i>Group Classes</li>
+              <li><i className="fas fa-check check-icon"></i>Group Trainer</li>
+              <li><i className="fas fa-check check-icon"></i>Fitness Orientation</li>
+              <li><i className="fas fa-check check-icon"></i>Personal Assistance</li>
+            </ul>
+            <button className="enroll-btn" onClick={redirectToPayment}>Enroll Now</button>
           </div>
-        ))}
+        </div>
+
+        {/* Advanced Yoga Package */}
+        <div className="price-card middle-card" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 69, 0, 0.5)), url('images/image19.jpg')` }}>
+          <div className="price-card-content">
+            <h2>Advanced Yoga</h2>
+            <h3>₹2500/month</h3>
+            <ul>
+              <li><i className="fas fa-check check-icon"></i>Access to Yoga Area</li>
+              <li><i className="fas fa-check check-icon"></i>Group Classes</li>
+              <li><i className="fas fa-check check-icon"></i>Group Trainer</li>
+              <li><i className="fas fa-check check-icon"></i>Fitness Orientation</li>
+              <li><i className="fas fa-check check-icon"></i>Personal Assistance</li>
+            </ul>
+            <button className="enroll-btn" onClick={redirectToPayment}>Enroll Now</button>
+          </div>
+        </div>
+
+        {/* Yoga Therapy Package */}
+        <div className="price-card" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 69, 0, 0.5)), url('images/image19.jpg')` }}>
+          <div className="price-card-content">
+            <h2>Yoga Therapy</h2>
+            <h3>₹3000/month</h3>
+            <ul>
+              <li><i className="fas fa-check check-icon"></i>Access to Yoga Area</li>
+              <li><i className="fas fa-check check-icon"></i>Group Classes</li>
+              <li><i className="fas fa-check check-icon"></i>Group Trainer</li>
+              <li><i className="fas fa-check check-icon"></i>Fitness Orientation</li>
+              <li><i className="fas fa-check check-icon"></i>Personal Assistance</li>
+            </ul>
+            <button className="enroll-btn" onClick={redirectToPayment}>Enroll Now</button>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default PriceCard;
+export default PriceCardSection;

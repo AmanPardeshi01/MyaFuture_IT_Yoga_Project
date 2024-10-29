@@ -44,8 +44,8 @@
 
 /* DIV1: Main Image Section */
 .div1 {
-width: 500px;
-height: 550px;
+width: 400px;
+height: 450px;
 /* border: 2px solid #4CAF50; */
 border-radius: 10%;
 overflow: hidden;
@@ -81,7 +81,7 @@ object-fit: cover;
 /* DIV3: Education Qualification, Overlapping Half of DIV2 */
 .div3 {
   position: absolute;
-  top: 350px; /* Half of DIV2 height */
+  top: 320px; /* Half of DIV2 height */
   left: 500px; /* Half of DIV2 width */
   width: 550px;
   height: 250px;

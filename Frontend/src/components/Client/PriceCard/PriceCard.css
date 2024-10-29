@@ -1,124 +1,108 @@
+/* Container for the price section and heading */
+.price-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the heading */
+.price-section-heading {
+  margin-top: 50px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Main container for the cards */
 .price-section {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style for each individual card */
+.price-card {
+  background-color: antiquewhite; 
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.price-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+
+.price-card h2 {
+  font-size: 24px;
+  color: #f97316;
+  margin-bottom: 10px;
+}
+
+.price-card h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.price-card ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+}
+
+.price-card ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  color: #4CAF50;
+  margin-right: 10px;
+}
+
+.enroll-btn {
+  background-color: #9B713D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 30px;
+  animation: blink 1s infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes blink {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  /* Style for each individual card */
-  .price-card {
-    background-color: antiquewhite; 
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    height: 400px;
-    width: 300px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    font-family: 'Roboto', sans-serif; /* Set font to Roboto */
-  }
-  
-  /* Card hover effect */
-  .price-card:hover {
+  50% {
     transform: scale(1.05);
   }
-  
-  /* Adjust middle card hover effect */
-  .price-card.middle-card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Faded background image */
-  .price-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    z-index: 1;
-  }
-  
-  /* Style for each card's content */
-  .price-card-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Package name and price in large font */
-  .price-card h2 {
-    font-size: 24px;
-    color: #f97316;
-    margin-bottom: 10px;
-  }
-  
-  .price-card h3 {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-  
-  /* List of benefits with tick icon and left alignment */
-  .price-card ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 16px;
-    color: #fff;
-    text-align: left; /* Align list to the left */
-  }
-  
-  .price-card ul li {
-    margin-bottom: 10px;
-    display: flex;
+}
+
+@media (max-width: 768px) {
+  .price-section {
+    flex-direction: column;
     align-items: center;
   }
-  
-  .check-icon {
-    color: #4CAF50; /* Tick icon color */
-    margin-right: 10px;
+
+  .price-card {
+    width: 90%;
   }
-  
-  /* Enroll Now button with blinking effect */
-  .enroll-btn {
-    background-color: #9B713D;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 30px;
-    animation: blink 1s infinite;
-    transition: transform 0.3s ease;
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-  
-  .enroll-btn:hover {
-    background-color: #f97316;
-  }
-  
-  /* Responsive behavior for smaller screens */
-  @media (max-width: 768px) {
-    .price-section {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .price-card {
-      width: 90%;
-    }
-  }
-  
+}

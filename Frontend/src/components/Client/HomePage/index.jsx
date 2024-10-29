@@ -11,7 +11,7 @@ import Landing from '../Landing/Landing'
 import Benifits from '../Benefits/Benifits'
 import Instructor from '../Instructor/Instructor'
 import PriceCard from '../PriceCard/PriceCard'
-import Blog from '../Blog/Blog'
+import BlogSection from '../Blog/Blog'
 
 const HomePage = () => {
     return (
@@ -22,7 +22,7 @@ const HomePage = () => {
            <Benifits />
             <Instructor />
             <PriceCard />
-            <Blog />
+            <BlogSection />
             <TestimonialSection />
             <Gallery />
             {/* <CardSection/> */}
