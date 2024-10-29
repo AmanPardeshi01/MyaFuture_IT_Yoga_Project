@@ -10,6 +10,8 @@ import Navbar from '../Navbar/Navbar'
 import Landing from '../Landing/Landing'
 import Benifits from '../Benefits/Benifits'
 import Instructor from '../Instructor/Instructor'
+import PriceCard from '../PriceCard/PriceCard'
+import Blog from '../Blog/Blog'
 
 const HomePage = () => {
     return (
@@ -19,6 +21,8 @@ const HomePage = () => {
            <Landing />
            <Benifits />
             <Instructor />
+            <PriceCard />
+            <Blog />
             <TestimonialSection />
             <Gallery />
             {/* <CardSection/> */}

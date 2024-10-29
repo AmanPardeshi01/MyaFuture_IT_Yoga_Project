@@ -1,0 +1,282 @@
+/***************************************
+========================================
+
+	Author Name   : Themeplaza
+	This is HTML5 template
+	Template Name : Blog Page Template Design
+	Version: 1.0
+	
+****************************************
+=======================================/
+
+/* ----------------------------------------------------------------
+    [ 01 Start Basics ]
+-----------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  word-wrap: break-word;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #333333;
+    overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	color: #333333;
+	font-weight: 600;
+}
+img{
+	max-width: 100%;
+	height: 100%;
+}
+ul{
+	padding: 0;
+	list-style: none;
+}
+p {	
+	font-weight: 400;
+	font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 15px;
+    color: #333333;
+    letter-spacing: 0;
+}
+a:hover{
+	text-decoration: none;
+	outline: none;
+}
+.text_white{
+	color: #fff;
+}
+.padding_0{
+	padding: 0;
+}
+.gray_bg{
+	background: #fff;
+}
+.dark_bg{
+	background: #2B2344;
+}
+
+/* ----------------------------------------------------------------
+    [ 15 Start Top-control ]
+-----------------------------------------------------------------*/
+.topcontrol {
+    background: #F95353 none repeat scroll 0 0;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    height: 40px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    padding: 6px 10px;
+    position: fixed;
+    margin-right: 10px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    width: 40px;
+    z-index: 99;
+}
+.topcontrol:hover {
+    background: #fff;
+    color: #F95353;
+}
+/* ---------------------------------------------------------------
+    [ End Top-control ]
+-----------------------------------------------------------------*/
+
+/* Start Section-Padding */
+.section_padding{
+	padding: 80px 0;
+}
+/* End Section-Padding */
+
+/* Start Section-Heading */
+.section_heading{
+    padding-bottom: 80px;
+}
+.section_heading h2 {
+    font-size: 42px;
+    font-weight: 600;
+	text-transform: uppercase;
+    color: #222;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.dark_bg .section_heading h2{
+	color: #fff;
+}
+.dark_bg .section_heading p{
+	color: #fff;
+}
+.section_heading .sm_border {
+    display: block;
+    height: 2px;
+    width: 70px;
+    margin-bottom: 15px;
+    bottom: -5px;
+    position: relative;
+    left: 50%;
+    background-color: #F95353 ;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.section_heading span{
+	font-weight: 600;
+	color: #F95353 ;
+}
+/* End Section-Heading */
+
+/* ----------------------------------------------------------------
+    [ End Basics ]
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+    [ 02 Start Buttons ]
+-----------------------------------------------------------------*/
+/* Start Btn-Style */
+.main_btn {
+    color: #fff;
+    font-size: 13px;
+    margin-top: 30px;
+    text-transform: capitalize;
+    padding: 20px 20px;
+    letter-spacing: 0.6px;
+	font-weight: 600;
+    background: #F95353 ;
+    line-height: 10px;
+	border: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out 0s;
+}
+.main_btn:hover {
+    color: #F95353 ;
+    background: #fff;
+}
+/* ----------------------------------------------------------------
+    [ End Buttons ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+    [ 12 Start Blog ]
+-----------------------------------------------------------------*/
+.single_blog{
+	margin-bottom: 30px;
+}
+.single_blog:hover img{
+	-moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.06);
+}
+.single_blog .blog-image{
+	overflow: hidden;
+}
+.single_blog img{
+	width: 100%;
+    border-radius: 3px 3px 0 0;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.5s;
+}
+.blog-thumb{
+	background: transparent;
+	-webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+.blog-thumb small {
+	color: #F95353;
+	font-weight: 500;
+	display: block;
+}
+.blog-thumb small .fa {
+	margin-right: 5px;
+}
+.blog-thumb small,
+.blog-thumb small + span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.blog-thumb small + span{
+	color: #777;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: capitalize;
+	margin-left: 2px;
+}
+.dark_bg .blog-thumb small + span{
+	color: #fff;
+}
+.blog-thumb h4 {
+	color: #222;
+    padding: 0px;
+	text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.dark_bg .blog-thumb h4{
+	color: #fff;
+}
+.dark_bg .blog-thumb p{
+	color: #a9b4c7;
+}
+.blog-thumb h4:hover{
+	color: #F95353;
+}
+.blog-info {
+	box-shadow: 0 1px 30px rgba(255, 255, 255, 0.2);
+	padding: 20px 30px;
+}
+.blog-info .blog_btn{
+	color: #222;
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: capitalize;
+	background: transparent;
+	border: none;
+	font-weight: 500;
+    transition: all 0.4s ease-in-out 0s;
+	padding: 10px 0px;
+}
+.dark_bg .blog-info .blog_btn{
+	color: #fff;
+}
+.blog-info .blog_btn:hover{
+	color: #F95353;
+}
+
+/* Set fixed width and height for all blog images */
+.blog-image img {
+    width: 100%; /* Makes the image responsive to its container */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the area */
+}
+
+/* ----------------------------------------------------------------
+    [ End Blog ]
+-----------------------------------------------------------------*/
